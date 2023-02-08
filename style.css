@@ -99,3 +99,28 @@ main{
     font-size: 2em;
     color: var(--color-azul);
 }
+
+
+
+
+/* ******************* PROJECT SECTION ************************* */
+
+
+.proj{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.img-proj{
+    width: 550px;
+}
+
+.img-proj img{
+    width: 100%;
+}
+
+.title-proj{
+    font-size: 6em;
+}
