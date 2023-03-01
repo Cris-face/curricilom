@@ -6,8 +6,8 @@
 }
 
 :root{
-    --color-azul: rgb(56, 41, 124);
-    --color-azul-h: rgb(67, 50, 151);
+    --color-azul: rgb(86, 21, 237);
+    --color-azul-h: rgb(67, 88, 156);
 }
 
 header{
@@ -89,8 +89,15 @@ main{
     margin: auto;
 }
 
+.block{
+    width: 20px;
+    height: 70%;
+    background-color: var(--color-azul);
+}
+
 .title{
     font-size: 7em;
+    color: rgb(27, 24, 49);
 }
 
 .paragraph{
@@ -102,11 +109,19 @@ main{
 .redes-sociales{
     display: flex;
     flex-direction: column;
+    align-self: end;
 }
 
 .r-item{
-    margin-bottom: 10px
+    width: 40px;
+    margin-bottom: 10px;
+    align-self: end;
 }
+
+.r-item img{
+    width: 100%;
+}
+
 
 .btn{
     display: block;
