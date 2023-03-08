@@ -6,8 +6,9 @@
 }
 
 :root{
-    --color-azul: rgb(86, 21, 237);
-    --color-azul-h: rgb(67, 88, 156);
+    --color-blue: rgb(86, 21, 237);
+    --color-blue-h: rgb(67, 88, 156);
+    --color-dark-blue: rgb(27, 24, 49);
 }
 
 header{
@@ -28,7 +29,7 @@ header{
 .log a{
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--color-azul);
+    color: var(--color-blue);
     text-decoration: none;
 }
 
@@ -48,7 +49,7 @@ header{
 }
 
 .menu-item:hover{
-    border-bottom: 2px solid var(--color-azul);
+    border-bottom: 2px solid var(--color-blue);
 }
 
 .menu-item a{
@@ -68,12 +69,12 @@ header{
     text-decoration: none;
     color: #fff;
     border-radius: 30px;
-    background-color: var(--color-azul);
+    background-color: var(--color-blue);
     transition: background-color .4s;    
 }
 
 .a-item:hover{
-    background-color: var(--color-azul-h);
+    background-color: var(--color-blue-h);
 }
 
 main{
@@ -90,20 +91,40 @@ main{
 }
 
 .block{
-    width: 20px;
+    width: 10px;
     height: 70%;
-    background-color: var(--color-azul);
+    background-color: var(--color-blue);
+    animation-name: line_animation;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes line_animation {
+    0%{height: 0%; background-color: var(--color-dark-blue);}
+    25%{height:  70%; background-color: var(--color-blue);}
+    50%{height: 20%; background-color:  var(--color-blue);}
+    100%{height: 70%; background-color:  var(--color-blue);}
+
 }
 
 .title{
     font-size: 7em;
-    color: rgb(27, 24, 49);
+    color: var(--color-dark-blue);
+    animation-name: title_animation;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: both;
 }
+@keyframes title_animation {
+    from {color: #fff;}
+    to {color: var(--color-dark-blue);}
+}
+
 
 .paragraph{
     font-size: 1.8em;
     margin-top: .5em;
-    color: var(--color-azul);
+    color: var(--color-blue);
 }
 
 .redes-sociales{
@@ -113,9 +134,16 @@ main{
 }
 
 .r-item{
+    position: relative;
     width: 40px;
     margin-bottom: 10px;
     align-self: end;
+    animation-name: red_item_animation;
+    animation-duration: 2s;
+}
+@keyframes red_item_animation {
+    from {width: 1px;}
+    to {width: 40px;}
 }
 
 .r-item img{
@@ -128,7 +156,7 @@ main{
     width: 10rem;
     padding: .8rem;
     text-align: center;
-    background-color: var(--color-azul);
+    background-color: var(--color-blue);
     color: #fff;
     border-radius: 25px;
     margin-top: 1rem;
